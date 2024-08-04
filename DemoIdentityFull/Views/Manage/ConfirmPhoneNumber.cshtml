@@ -1,0 +1,21 @@
+﻿@model DemoIdentityFull.Models.ManageViewModels.ConfirmPhoneNumberViewModel
+@{
+    ViewData["Title"] = "ConfirmPhoneNumber";
+}
+
+<h1>Confirm Phone Number</h1>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" asp-action="SendPhoneVerificationCode" asp-controller="Manage">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label>Add or Update Phone Number</label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Confirm Phone Number</button>
+        </form>
+    </div>
+</div>
